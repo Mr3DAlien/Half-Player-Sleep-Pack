@@ -8,7 +8,7 @@ execute if score .sleeping hps_sleep matches 0 run advancement revoke @a[advance
 
 # Adds the counter of how many players are online
 scoreboard players set .online hps_sleep 0
-execute as @a[nbt={Dimension:0}] run scoreboard players add .online hps_sleep 1
+execute as @a[nbt={Dimension:"minecraft:overworld"}] run scoreboard players add .online hps_sleep 1
 
 # Stores the online score amount in the half score and divisions it with the division score
 execute store result score .half hps_sleep run scoreboard players get .online hps_sleep
